@@ -5,9 +5,11 @@ using UnityEngine;
 
 public class Waves : MonoBehaviour
 {
+    public static event System.Action TransitionFinished;
+
     public int Dimension = 10;
     //public float UVScale = 2f;
-    public Octave[] Octaves;
+    public List<Octave> Octaves = new List<Octave>();
 
     protected MeshFilter MeshFilter;
     protected Mesh Mesh;
@@ -37,6 +39,35 @@ public class Waves : MonoBehaviour
         }
 
 
+    }
+
+   public IEnumerator TransiOctaves(Difficulty difficulty)
+    {
+        float elapsed = 0;
+        //var startingPos : Vector3 = transform.position;
+
+        for (int i = 0; i < difficulty.Octaves.Count; i++)
+        {
+            Vector2 baseSpeed = Octaves[i].speed;
+            Vector2 baseScale = Octaves[i].scale;
+            float baseHeight = Octaves[i].height;
+
+            while (elapsed < difficulty.transitionTimeToNextLevel / Octaves.Count)
+            {
+                Octaves[i].speed = Vector2.Lerp(baseSpeed, difficulty.Octaves[i].speed, (elapsed / difficulty.transitionTimeToNextLevel));
+                Octaves[i].scale = Vector2.Lerp(baseScale, difficulty.Octaves[i].scale, (elapsed / difficulty.transitionTimeToNextLevel));
+                Octaves[i].height = Mathf.Lerp(baseHeight, difficulty.Octaves[i].height, (elapsed / difficulty.transitionTimeToNextLevel));
+
+                elapsed += Time.deltaTime;
+                yield return new WaitForEndOfFrame();
+            }
+        }
+        for(int j = 0; j < Octaves.Count; j++)
+        {
+            Octaves[j] = difficulty.Octaves[j];
+        }
+        TransitionFinished?.Invoke();
+        yield return null;
     }
 
     private Vector2[] GenerateUVs()
@@ -147,7 +178,7 @@ public class Waves : MonoBehaviour
             {
                 var y = 0f;
 
-                for (int o = 0; o < Octaves.Length; o++)
+                for (int o = 0; o < Octaves.Count; o++)
                 {
                     if (Octaves[o].alternate)
                     {
@@ -177,7 +208,7 @@ public class Waves : MonoBehaviour
     }
 
     [Serializable]
-    public struct Octave
+    public class Octave
     {
         public Vector2 speed;
         public Vector2 scale;

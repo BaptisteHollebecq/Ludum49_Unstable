@@ -377,6 +377,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 329581586}
+  - component: {fileID: 329581587}
   m_Layer: 9
   m_Name: Wheels
   m_TagString: Untagged
@@ -404,6 +405,37 @@ Transform:
   m_Father: {fileID: 1506799648}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &329581587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 329581585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f7eb891fae1cff41be840c5b3eeb3ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mass: 0.5
+  radius: 0.25
+  wheelDampingRate: 10
+  suspensionDistance: 0.5
+  forceApplicationDistance: 0
+  center: {x: 0, y: 0, z: 0}
+  spring: 100
+  damper: 20
+  targetPosition: 0
+  extremumSlipF: 1
+  extremumValueF: 1
+  asymptoteSlipF: 1
+  asymptoteValueF: 1
+  StiffnessF: 1
+  extremumSlipS: 1
+  extremumValueS: 1
+  asymptoteSlipS: 1
+  asymptoteValueS: 1
+  StiffnessS: 1
 --- !u!1 &349809723
 GameObject:
   m_ObjectHideFlags: 0
@@ -1692,6 +1724,7 @@ GameObject:
   - component: {fileID: 1506799648}
   - component: {fileID: 1506799649}
   - component: {fileID: 1506799650}
+  - component: {fileID: 1506799651}
   m_Layer: 0
   m_Name: Boat
   m_TagString: Untagged
@@ -1707,7 +1740,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1506799647}
   m_LocalRotation: {x: -0, y: -0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.01, z: 0}
+  m_LocalPosition: {x: 0, y: -0.52, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2006201777}
@@ -1730,8 +1763,8 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 1
-  m_Constraints: 8
-  m_CollisionDetection: 2
+  m_Constraints: 40
+  m_CollisionDetection: 1
 --- !u!114 &1506799650
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1745,8 +1778,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Motor: {fileID: 839173510}
-  speed: 0
-  RotationForce: 100
+  minimalAngleToMove: 3
+  MovementForce: 7
+--- !u!114 &1506799651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1506799647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aba1aefb7bb47274ea6f03ac34ac3573, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1548978849
 GameObject:
   m_ObjectHideFlags: 0

@@ -6,8 +6,9 @@ using UnityEngine;
 public class ShipMovement : MonoBehaviour
 {
     public Transform Motor;
-    public float speed = 3f;
-    public float RotationForce = 250f;
+    //public float speed = 3f;
+    public float minimalAngleToMove = 3f;
+    public float MovementForce = 250f;
 
     Rigidbody _rb;
     float _left = 0;
@@ -20,15 +21,19 @@ public class ShipMovement : MonoBehaviour
     private void Update()
     {
         _left =  Vector3.SignedAngle(Vector3.up, transform.up, Vector3.forward);
+
     }
 
     private void FixedUpdate()
     {
-        _rb.AddForceAtPosition(_left * transform.right * RotationForce / 100f, Motor.position);
+        if (_left > minimalAngleToMove || _left < -minimalAngleToMove)
+        {
+            ApplyForceToReachVelocity(transform.right * -_left * MovementForce, 1);
+        }
 
         var forward = Vector3.Scale(new Vector3(1, 0, 1), transform.forward);
 
-        ApplyForceToReachVelocity(forward * speed, 1);
+        //ApplyForceToReachVelocity(forward * speed, 1);
     }
 
     public void ApplyForceToReachVelocity(Vector3 velocity, float force = 1, ForceMode mode = ForceMode.Force)

@@ -6,7 +6,7 @@ using UnityEngine;
 public class Waves : MonoBehaviour
 {
     public int Dimension = 10;
-    public float UVScale = 2f;
+    //public float UVScale = 2f;
     public Octave[] Octaves;
 
     protected MeshFilter MeshFilter;

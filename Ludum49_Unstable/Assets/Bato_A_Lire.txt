@@ -1,0 +1,31 @@
+https://www.youtube.com/watch?v=LhVGa11CBYk   <= J'ai utiliser cette thechnique
+
+https://docs.unity3d.com/Manual/class-WheelCollider.html   <=  doc Wheel Collider
+
+
+il y a un RigidBody sur le root du bateau
+	- toucher a rien a part la mass 
+
+le body(visuel) du bateau doit etre sur le layer UnderWater
+le "Wheels" et tout les enfants doivent etre sur le layer Floater
+le Motor c'est juste un transform a mettre a l'arriere pour appliquer les forces pour tourner
+
+il faut minimum 6 Roues 
+	- 1 a chaque coin pour faire les floteurs de base du bateau 
+		plus elles sont proche de l'axe Arriere-Avant plus le bateau penche facilement sur les cotés
+		plus elles sont proche de l'axe Gauche-Droite plus le bateau penche facilement sur l'avant-arriere
+	- 1 de chaque cote plus haut pour delimiter l'inclinaison max 
+
+
+lire la doc des wheels collider pour comprendre les parametres et regler sur un feelings interessant 
+
+ps : une physique un peu jouer peu etre sympa et coller avec la DA
+
+
+pour les cargaisons il faut juste un rigidbody pour gerer le poid de l'objet
+				et un physique material pour gerer si ca glisse bcp ou non 
+
+
+@GUILLAUME => faire un shader qui fait des vagues
+
+

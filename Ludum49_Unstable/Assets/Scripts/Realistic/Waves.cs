@@ -11,6 +11,7 @@ public class Waves : MonoBehaviour
 
     protected MeshFilter MeshFilter;
     protected Mesh Mesh;
+    protected MeshCollider MeshCollider;
 
     // Start is called before the first frame update
     void Start()
@@ -26,6 +27,9 @@ public class Waves : MonoBehaviour
 
         MeshFilter = gameObject.AddComponent<MeshFilter>();
         MeshFilter.mesh = Mesh;
+
+        MeshCollider = gameObject.GetComponent<MeshCollider>();
+
     }
 
     private Vector2[] GenerateUVs()
@@ -157,6 +161,8 @@ public class Waves : MonoBehaviour
 
         Mesh.vertices = verts;
         Mesh.RecalculateNormals();
+
+        MeshCollider.sharedMesh = Mesh;
     }
 
     [Serializable]

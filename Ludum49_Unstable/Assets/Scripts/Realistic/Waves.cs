@@ -6,7 +6,7 @@ using UnityEngine;
 public class Waves : MonoBehaviour
 {
     public int Dimension = 10;
-    public float UVScale = 2f;
+    //public float UVScale = 2f;
     public Octave[] Octaves;
 
     protected MeshFilter MeshFilter;
@@ -41,8 +41,7 @@ public class Waves : MonoBehaviour
         {
             for (int z = 0; z <= Dimension; z++)
             {
-                var vec = new Vector2((x / UVScale) % 2, (z / UVScale) % 2);
-                uvs[index(x, z)] = new Vector2(vec.x <= 1 ? vec.x : 2 - vec.x, vec.y <= 1 ? vec.y : 2 - vec.y);
+                uvs[index(x, z)] = new Vector2(x, z);
             }
         }
 

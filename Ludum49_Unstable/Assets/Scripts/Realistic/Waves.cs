@@ -13,6 +13,8 @@ public class Waves : MonoBehaviour
     protected Mesh Mesh;
     protected MeshCollider MeshCollider;
 
+    public bool Collider;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,7 +30,12 @@ public class Waves : MonoBehaviour
         MeshFilter = gameObject.AddComponent<MeshFilter>();
         MeshFilter.mesh = Mesh;
 
-        MeshCollider = gameObject.GetComponent<MeshCollider>();
+        if (Collider)
+        {
+            MeshCollider = gameObject.GetComponent<MeshCollider>();
+
+        }
+
 
     }
 
@@ -41,8 +48,7 @@ public class Waves : MonoBehaviour
         {
             for (int z = 0; z <= Dimension; z++)
             {
-                var vec = new Vector2((x / UVScale) % 2, (z / UVScale) % 2);
-                uvs[index(x, z)] = new Vector2(vec.x <= 1 ? vec.x : 2 - vec.x, vec.y <= 1 ? vec.y : 2 - vec.y);
+                uvs[index(x, z)] = new Vector2(x, z);
             }
         }
 
@@ -162,7 +168,12 @@ public class Waves : MonoBehaviour
         Mesh.vertices = verts;
         Mesh.RecalculateNormals();
 
-        MeshCollider.sharedMesh = Mesh;
+        if (Collider)
+        {
+            MeshCollider.sharedMesh = Mesh;
+
+        }
+
     }
 
     [Serializable]

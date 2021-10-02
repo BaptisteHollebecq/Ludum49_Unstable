@@ -1,0 +1,114 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: WaterShader
+  m_Shader: {fileID: 4800000, guid: 07d3172fba1f82b4babde52f52204906, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _FoamDiffuse:
+        m_Texture: {fileID: 2800000, guid: 1847c427ebed2b7469dd22667fe6e4e0, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _FoamDiffuse1:
+        m_Texture: {fileID: 2800000, guid: 6db914f06cbc33f45845d00e9de07bcb, type: 3}
+        m_Scale: {x: 0.5, y: 0.5}
+        m_Offset: {x: 0, y: 0}
+    - _FoamNormal:
+        m_Texture: {fileID: 2800000, guid: 36f10010ce768464587061dff0582d9b, type: 3}
+        m_Scale: {x: 0.5, y: 0.5}
+        m_Offset: {x: 0, y: 0}
+    - _Noise:
+        m_Texture: {fileID: 2800000, guid: 7d517a701e6cf1f44b4c8ee3b6e57cc6, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Noise1:
+        m_Texture: {fileID: 2800000, guid: 7d517a701e6cf1f44b4c8ee3b6e57cc6, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NormalMap:
+        m_Texture: {fileID: 2800000, guid: 2025b00838fb01443876acd51f9f1221, type: 3}
+        m_Scale: {x: 3, y: 3}
+        m_Offset: {x: 0, y: 0}
+    - _NormalMap1:
+        m_Texture: {fileID: 2800000, guid: 8662d55792e936443b636333a73cbcbd, type: 3}
+        m_Scale: {x: 0.3, y: 0.3}
+        m_Offset: {x: 0, y: 0}
+    - _NormalMap2:
+        m_Texture: {fileID: 2800000, guid: 2025b00838fb01443876acd51f9f1221, type: 3}
+        m_Scale: {x: 0.1, y: 0.1}
+        m_Offset: {x: 0, y: 0}
+    - _TextureSample0:
+        m_Texture: {fileID: 2800000, guid: 8662d55792e936443b636333a73cbcbd, type: 3}
+        m_Scale: {x: 2, y: 2}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _ChromaticAberration: 0.1
+    - _DepthContrast: 0.1
+    - _DepthContrast1: 0.1
+    - _DepthPos: 0.05
+    - _DepthPos1: 0.05
+    - _EdgePos: -0.62
+    - _EdgePos1: -0.62
+    - _Emission: 0
+    - _FoamContrast: 0.61
+    - _FoamNormalScale: 0.03
+    - _FoamPosition: 0.471
+    - _Normal1Scale: -0.67
+    - _Normal2Scale: 0.5
+    - _NormalScale: 1
+    - _Opacity: 1
+    - _RefractionAmount: 0.06
+    - _RefractionAmount1: 0.06
+    - _SecondColorContrast: 1
+    - _SecondColorPosition: -1
+    - _Smoothness: 1
+    - _SpecularAmount: 0.84
+    - _SpecularIntensity: 13.9
+    - _TransAmbient: 1
+    - _TransDirect: 1
+    - _TransNormalDistortion: 0
+    - _TransScattering: 13.9
+    - _TransShadow: 0.784
+    - _Translu: 0.14
+    - _Translucency: 2.9
+    - _Transmission: 1
+    - _WavesAmplitude: 0.2
+    - __dirty: 0
+    - _refraction: -9.18
+    m_Colors:
+    - _Color0: {r: 0.13803844, g: 0.46732002, b: 0.6226415, a: 1}
+    - _EdgeColor: {r: 0.6179246, g: 0.74145406, b: 1, a: 0}
+    - _EdgeColor1: {r: 0.6179246, g: 0.74145406, b: 1, a: 0}
+    - _FoamColor: {r: 1, g: 1, b: 1, a: 1}
+    - _MainColor: {r: 0.022116425, g: 0.57837206, b: 0.6698113, a: 0}
+    - _MainColor2: {r: 0.15138839, g: 0.40750867, b: 0.509434, a: 0}
+    - _NoiseSpeed: {r: 0.1, g: 0.2, b: 0, a: 0}
+    - _Normal1Speed: {r: 0, g: -0.1, b: 0, a: 0}
+    - _Normal2Speed: {r: 0, g: -0.05, b: 0, a: 0}
+    - _NormalMapSpeed: {r: 0, g: 0.2, b: 0, a: 0.1}
+    - _WaterDepthColor: {r: 0, g: 0.16862746, b: 0.6901961, a: 1}
+    - _WaterDepthColor1: {r: 0, g: 0.16862746, b: 0.6901961, a: 1}
+    - _WaterMainColor: {r: 0, g: 0.3921569, b: 0.67058825, a: 1}
+    - _WaterMainColor1: {r: 0, g: 0.3921569, b: 0.67058825, a: 1}
+    - _WavesSpeed: {r: 0.5, g: 0.5, b: 0, a: 0}
+    - _WavesSpeed1: {r: 0.5, g: 0.5, b: 0, a: 0}
+    - _WavesUVControl: {r: 0.05, g: 0.05, b: 0, a: 0}
+    - _WavesUVControl1: {r: 0.05, g: 0.05, b: 0, a: 0}

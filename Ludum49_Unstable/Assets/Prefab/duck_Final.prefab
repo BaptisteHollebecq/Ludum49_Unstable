@@ -72,7 +72,7 @@ GameObject:
   - component: {fileID: 927304738463032737}
   - component: {fileID: 1239757202238169915}
   m_Layer: 0
-  m_Name: duck 1
+  m_Name: duck_Final
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -649,7 +649,7 @@ GameObject:
   - component: {fileID: 3204708960297758131}
   - component: {fileID: 2115798956556159271}
   - component: {fileID: 1048022410459762756}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: default
   m_TagString: Untagged
   m_Icon: {fileID: 0}

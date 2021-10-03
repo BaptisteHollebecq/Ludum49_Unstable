@@ -18,13 +18,13 @@ MonoBehaviour:
     value: 1
   focusDistance:
     overrideState: 1
-    value: 11.26
+    value: 3.16
   aperture:
     overrideState: 1
-    value: 2.85
+    value: 6.79
   focalLength:
     overrideState: 1
-    value: 60.1
+    value: 84.8
   kernelSize:
     overrideState: 0
     value: 1
@@ -140,13 +140,13 @@ MonoBehaviour:
     value: 37
   saturation:
     overrideState: 1
-    value: -27.2
+    value: -42.7
   brightness:
     overrideState: 0
     value: 0
   postExposure:
     overrideState: 1
-    value: 2
+    value: 1.06
   contrast:
     overrideState: 0
     value: -39.7
@@ -1469,7 +1469,7 @@ MonoBehaviour:
     value: 1
   intensity:
     overrideState: 1
-    value: 0.58
+    value: 0.13
   color:
     overrideState: 0
     value: {r: 0, g: 0, b: 0, a: 1}

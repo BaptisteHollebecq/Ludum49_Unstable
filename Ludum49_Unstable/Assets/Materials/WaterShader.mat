@@ -68,18 +68,23 @@ Material:
     - _EdgePos: -0.62
     - _EdgePos1: -0.62
     - _Emission: 0
-    - _FoamContrast: 0.61
+    - _Float0: 34.66
+    - _Float1: 21.96
+    - _Float2: 84.8
+    - _Float3: -15
+    - _FoamContrast: 0.676
     - _FoamNormalScale: 0.03
-    - _FoamPosition: 0.471
-    - _Normal1Scale: -0.67
-    - _Normal2Scale: 0.5
+    - _FoamPosition: 0.41
+    - _Normal1Scale: 0.28
+    - _Normal2Scale: 0.3
     - _NormalScale: 1
-    - _Opacity: 1
+    - _OffsetAmount: 2.9
+    - _Opacity: 0.865
     - _RefractionAmount: 0.06
     - _RefractionAmount1: 0.06
     - _SecondColorContrast: 1
     - _SecondColorPosition: -1
-    - _Smoothness: 1
+    - _Smoothness: 0.932
     - _SpecularAmount: 0.84
     - _SpecularIntensity: 13.9
     - _TransAmbient: 1
@@ -97,9 +102,9 @@ Material:
     - _Color0: {r: 0.13803844, g: 0.46732002, b: 0.6226415, a: 1}
     - _EdgeColor: {r: 0.6179246, g: 0.74145406, b: 1, a: 0}
     - _EdgeColor1: {r: 0.6179246, g: 0.74145406, b: 1, a: 0}
-    - _FoamColor: {r: 1, g: 1, b: 1, a: 1}
-    - _MainColor: {r: 0.022116425, g: 0.57837206, b: 0.6698113, a: 0}
-    - _MainColor2: {r: 0.15138839, g: 0.40750867, b: 0.509434, a: 0}
+    - _FoamColor: {r: 0.6132076, g: 0.6132076, b: 0.6132076, a: 1}
+    - _MainColor: {r: 0.02211642, g: 0.5783721, b: 0.6698113, a: 0}
+    - _MainColor2: {r: 0, g: 0.4851753, b: 0.6792453, a: 0}
     - _NoiseSpeed: {r: 0.1, g: 0.2, b: 0, a: 0}
     - _Normal1Speed: {r: 0, g: -0.1, b: 0, a: 0}
     - _Normal2Speed: {r: 0, g: -0.05, b: 0, a: 0}

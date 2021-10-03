@@ -25,7 +25,6 @@ public class MainMenu : MonoBehaviour
 
     public void OnButtonClick(string type)
     {
-        MenuType t;
         switch (type)
         {
             case "Main":

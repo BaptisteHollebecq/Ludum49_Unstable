@@ -78,7 +78,7 @@ Material:
     - _Normal1Scale: 0.28
     - _Normal2Scale: 0.3
     - _NormalScale: 1
-    - _OffsetAmount: 2.9
+    - _OffsetAmount: 0
     - _Opacity: 0.865
     - _RefractionAmount: 0.06
     - _RefractionAmount1: 0.06

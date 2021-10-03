@@ -10,7 +10,6 @@ public class DragDropManager : MonoBehaviour
 
     bool gotCreate = false;
     GameObject grabbed = null;
-    Vector3 lastPos = Vector3.zero;
 
     private void Update()
     {
@@ -23,7 +22,6 @@ public class DragDropManager : MonoBehaviour
                 gotCreate = true;
                 grabbed = hit.transform.gameObject;
                 grabbed.GetComponent<Rigidbody>().useGravity = false;
-                lastPos = grabbed.transform.position;
             }
         }
 
@@ -46,23 +44,9 @@ public class DragDropManager : MonoBehaviour
         {
             if (gotCreate)
             {
-                RaycastHit hit;
-                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-                if (!Physics.Raycast(ray, out hit, 100, BoatLayer))
-                {
-                    grabbed.transform.position = lastPos;
-                    grabbed.GetComponent<Rigidbody>().useGravity = true;
-                    grabbed = null;
-                    lastPos = Vector3.zero;
-                    gotCreate = false;
-                }
-                else
-                {
-                    lastPos = Vector3.zero;
                     grabbed.GetComponent<Rigidbody>().useGravity = true;
                     grabbed = null;
                     gotCreate = false;
-                }
             }
         }
     }

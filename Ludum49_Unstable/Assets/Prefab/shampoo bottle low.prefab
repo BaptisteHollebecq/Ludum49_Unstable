@@ -501,9 +501,9 @@ GameObject:
   - component: {fileID: 7626701009913196169}
   - component: {fileID: 2384569425260880979}
   - component: {fileID: 2447677198206415564}
-  m_Layer: 9
+  m_Layer: 14
   m_Name: shampoo bottle low
-  m_TagString: Untagged
+  m_TagString: obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -610,7 +610,7 @@ GameObject:
   - component: {fileID: 7282806143611356193}
   m_Layer: 10
   m_Name: Wheels
-  m_TagString: Untagged
+  m_TagString: obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

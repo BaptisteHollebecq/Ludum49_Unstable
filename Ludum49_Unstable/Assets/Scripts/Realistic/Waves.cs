@@ -5,8 +5,6 @@ using UnityEngine;
 
 public class Waves : MonoBehaviour
 {
-    public static event System.Action TransitionFinished;
-
     public int Dimension = 10;
     //public float UVScale = 2f;
     public List<Octave> Octaves = new List<Octave>();
@@ -38,36 +36,6 @@ public class Waves : MonoBehaviour
 
         }
 
-
-    }
-
-   public IEnumerator TransiOctaves(Difficulty difficulty)
-    {
-        float elapsed = 0;
-        //var startingPos : Vector3 = transform.position;
-
-        for (int i = 0; i < difficulty.Octaves.Count; i++)
-        {
-            Vector2 baseSpeed = Octaves[i].speed;
-            Vector2 baseScale = Octaves[i].scale;
-            float baseHeight = Octaves[i].height;
-
-            while (elapsed < difficulty.transitionTimeToNextLevel / Octaves.Count)
-            {
-                Octaves[i].speed = Vector2.Lerp(baseSpeed, difficulty.Octaves[i].speed, (elapsed / difficulty.transitionTimeToNextLevel));
-                Octaves[i].scale = Vector2.Lerp(baseScale, difficulty.Octaves[i].scale, (elapsed / difficulty.transitionTimeToNextLevel));
-                Octaves[i].height = Mathf.Lerp(baseHeight, difficulty.Octaves[i].height, (elapsed / difficulty.transitionTimeToNextLevel));
-
-                elapsed += Time.deltaTime;
-                yield return new WaitForEndOfFrame();
-            }
-        }
-        for(int j = 0; j < Octaves.Count; j++)
-        {
-            Octaves[j] = difficulty.Octaves[j];
-        }
-        TransitionFinished?.Invoke();
-        yield return null;
     }
 
     private Vector2[] GenerateUVs()
@@ -192,7 +160,7 @@ public class Waves : MonoBehaviour
                     }
                 }
 
-                    verts[index(x, z)] = new Vector3(x, y, z);
+                verts[index(x, z)] = new Vector3(x, y, z);
             }
         }
 
